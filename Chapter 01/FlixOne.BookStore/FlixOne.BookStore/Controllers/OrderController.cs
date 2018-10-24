@@ -8,20 +8,12 @@ namespace FlixOne.BookStore.Controllers
     {
         private readonly IOrder _order;
 
-        public OrderController()
-        {
-            _order = new Order();
-        }
-        public OrderController(IOrder order)
-        {
-            _order = order;
-        }
-        // GET: Order
-        public ActionResult Index()
-        {
+        public OrderController() => _order = new Order();
 
-            return View(_order.Get());
-        }
+        public OrderController(IOrder order) => _order = order;
+
+        // GET: Order
+        public ActionResult Index() => View(_order.Get());
 
         // GET: Order/Details/5
         public ActionResult Details(string id)

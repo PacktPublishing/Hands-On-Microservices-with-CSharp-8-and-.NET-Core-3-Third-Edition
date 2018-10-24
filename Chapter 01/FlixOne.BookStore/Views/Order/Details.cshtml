@@ -1,0 +1,39 @@
+﻿@model FlixOne.BookStore.Models.OrderModel
+
+@{
+    ViewBag.Title = "Order Tracking details";
+}
+
+<h2>Tracking Details for Order# @Model.OrderId</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to Trak Order", "Index")
+</p>

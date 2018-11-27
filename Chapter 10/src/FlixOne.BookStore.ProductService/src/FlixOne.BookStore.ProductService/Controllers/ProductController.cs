@@ -25,6 +25,7 @@ namespace FlixOne.BookStore.ProductService.Controllers
             var productModel = await _productRepository.GetAllAsync();
             return productModel.Select(ToProductViewModel).ToList();
         }
+
         [HttpGet]
         [Route("product/{id}")]
         public async Task<ProductViewModel> Get(string id)
@@ -32,6 +33,7 @@ namespace FlixOne.BookStore.ProductService.Controllers
             var order = await _productRepository.GetByAsync(new Guid(id));
             return ToProductViewModel(order);
         }
+
         private ProductViewModel ToProductViewModel(Product product)
         {
             return new ProductViewModel

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FlixOne.BookStore.ProductService.Contexts;
+﻿using FlixOne.BookStore.ProductService.Contexts;
 using FlixOne.BookStore.ProductService.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

@@ -1,5 +1,3 @@
-using System;
-
 namespace FlixOne.BookStore.ProductService.Models
 {
     public class ErrorViewModel

@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlixOne.BookStore.ProductService", "FlixOne.BookStore.ProductService\FlixOne.BookStore.ProductService.csproj", "{DE9684A2-D058-47C0-A4E9-A4E53F0D79AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.BookStore.ProductService.UnitTests", "FlixOne.BookStore.ProductService.UnitTests\FlixOne.BookStore.ProductService.UnitTests.csproj", "{EA6BA009-B517-4056-B43F-E4603F426FBA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.BookStore.ProductService.UnitTests", "FlixOne.BookStore.ProductService.UnitTests\FlixOne.BookStore.ProductService.UnitTests.csproj", "{F8F9B0C5-FA98-4B08-A09C-6D2FD781F2FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.BookStore.ProductService.IntegrationTests", "FlixOne.BookStore.ProductService.IntegrationTests\FlixOne.BookStore.ProductService.IntegrationTests.csproj", "{611BFDE4-C461-4144-9A47-4D52FD0864DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.BookStore.ProductService.IntegrationTests", "FlixOne.BookStore.ProductService.IntegrationTests\FlixOne.BookStore.ProductService.IntegrationTests.csproj", "{BDE9851F-5802-4840-9C59-1125A6774EF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{DE9684A2-D058-47C0-A4E9-A4E53F0D79AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE9684A2-D058-47C0-A4E9-A4E53F0D79AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE9684A2-D058-47C0-A4E9-A4E53F0D79AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA6BA009-B517-4056-B43F-E4603F426FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA6BA009-B517-4056-B43F-E4603F426FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA6BA009-B517-4056-B43F-E4603F426FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA6BA009-B517-4056-B43F-E4603F426FBA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{611BFDE4-C461-4144-9A47-4D52FD0864DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{611BFDE4-C461-4144-9A47-4D52FD0864DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{611BFDE4-C461-4144-9A47-4D52FD0864DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{611BFDE4-C461-4144-9A47-4D52FD0864DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F9B0C5-FA98-4B08-A09C-6D2FD781F2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F9B0C5-FA98-4B08-A09C-6D2FD781F2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F9B0C5-FA98-4B08-A09C-6D2FD781F2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F9B0C5-FA98-4B08-A09C-6D2FD781F2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE9851F-5802-4840-9C59-1125A6774EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE9851F-5802-4840-9C59-1125A6774EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE9851F-5802-4840-9C59-1125A6774EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE9851F-5802-4840-9C59-1125A6774EF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

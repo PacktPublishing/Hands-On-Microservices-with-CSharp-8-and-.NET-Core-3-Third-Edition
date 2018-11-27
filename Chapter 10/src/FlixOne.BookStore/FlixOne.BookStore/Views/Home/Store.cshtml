@@ -1,0 +1,42 @@
+﻿@using System.Linq
+@model System.Collections.Generic.IEnumerable<FlixOne.BookStore.Models.ProductViewModel>
+
+@{
+    ViewData["Title"] = "Book Store";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Book Image</th>
+            <th>Book Type</th>
+            <th>Book Name</th>
+            <th>Book Description</th>
+            <th>Book Price</th>
+        </tr>
+    </thead>
+    <tbody>
+    @{
+        var rowIndex = 0;
+        foreach (var p in Model)
+        {
+            rowIndex += 1;
+            <tr>
+                <th scope="row">@rowIndex</th>
+                <td><img src="images/banner1.svg" alt="@p.CategoryName"></td>
+                <td>@p.CategoryName</td>
+                <td>@p.ProductName</td>
+                <td>@p.ProductDescription</td>
+                <td>@p.ProductPrice</td>
+                <td>@Html.ActionLink("Order","Order",new{id=p.ProductId})</td>
+            </tr>
+        }
+    }
+
+
+
+    </tbody>
+</table>

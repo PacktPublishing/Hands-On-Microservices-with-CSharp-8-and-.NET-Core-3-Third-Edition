@@ -9,7 +9,7 @@ using static System.Console;
 namespace FlixOne.BookStore.MessageReceiver
 {
     /// <summary>
-    /// Code is adapted from:https://github.com/Azure/azure-service-bus/tree/master/samples/DotNet/Microsoft.Azure.ServiceBus
+    /// Code-example is referenced to:https://github.com/Azure/azure-service-bus/tree/master/samples/DotNet/Microsoft.Azure.ServiceBus
     /// </summary>
     class Program
     {

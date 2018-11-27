@@ -7,7 +7,7 @@ namespace FlixOne.BookStore.ProductClient
     class Program
     {
         private const string ApiKey = "myAPI Key";
-        private const string BaseUrl = "http://localhost:2615/api";
+        private const string BaseUrl = "http://localhost:2615/api"; //Replace it with your api server uri
         static void Main(string[] args)
         {
             GetProductList("/product/GetProductAsync");

@@ -1,0 +1,37 @@
+{
+  "consumer": {
+    "name": "Product API Consumer"
+  },
+  "provider": {
+    "name": "Product API"
+  },
+  "interactions": [
+    {
+      "description": "a request to check the api status",
+      "request": {
+        "method": "get",
+        "path": "/echo/status",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "up": true,
+          "upSince": "2017-11-06T00:52:01.3164539Z",
+          "version": "2.0.0",
+          "message": "I'm up and running from last 19 hours."
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

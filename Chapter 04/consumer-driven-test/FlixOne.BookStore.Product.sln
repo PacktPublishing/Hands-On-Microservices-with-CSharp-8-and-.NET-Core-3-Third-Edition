@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlixOne.BookStore.Client", "Consumer\FlixOne.BookStore.Client\FlixOne.BookStore.Client.csproj", "{6181EB79-DB78-4061-92EF-8033CB56D2CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlixOne.BookStore.Client.Test", "Consumer\FlixOne.BookStore.Client.Test\FlixOne.BookStore.Client.Test.csproj", "{B0B3B762-697A-4453-8F4E-4E773F5E3061}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumer", "Consumer", "{E6A432A9-33C8-499B-A4E7-6252F4F18CB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provider", "Provider", "{F3C1FB6B-FF3D-4F82-8350-E6CA55707136}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlixOne.BookStore.ProductService", "Provider\FlixOne.BookStore.ProductService\FlixOne.BookStore.ProductService.csproj", "{F5D0F105-0F92-4BC7-8668-664C395DDE3A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlixOne.BookStore.ProductService.Test", "Provider\FlixOne.BookStore.ProductService.Test\FlixOne.BookStore.ProductService.Test.csproj", "{8D1A9F9F-5C6D-46C6-88F5-D30E5A116C59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6181EB79-DB78-4061-92EF-8033CB56D2CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6181EB79-DB78-4061-92EF-8033CB56D2CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6181EB79-DB78-4061-92EF-8033CB56D2CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6181EB79-DB78-4061-92EF-8033CB56D2CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B3B762-697A-4453-8F4E-4E773F5E3061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B3B762-697A-4453-8F4E-4E773F5E3061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B3B762-697A-4453-8F4E-4E773F5E3061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B3B762-697A-4453-8F4E-4E773F5E3061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5D0F105-0F92-4BC7-8668-664C395DDE3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D0F105-0F92-4BC7-8668-664C395DDE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D0F105-0F92-4BC7-8668-664C395DDE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D0F105-0F92-4BC7-8668-664C395DDE3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1A9F9F-5C6D-46C6-88F5-D30E5A116C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1A9F9F-5C6D-46C6-88F5-D30E5A116C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1A9F9F-5C6D-46C6-88F5-D30E5A116C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1A9F9F-5C6D-46C6-88F5-D30E5A116C59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6181EB79-DB78-4061-92EF-8033CB56D2CF} = {E6A432A9-33C8-499B-A4E7-6252F4F18CB1}
+		{B0B3B762-697A-4453-8F4E-4E773F5E3061} = {E6A432A9-33C8-499B-A4E7-6252F4F18CB1}
+		{F5D0F105-0F92-4BC7-8668-664C395DDE3A} = {F3C1FB6B-FF3D-4F82-8350-E6CA55707136}
+		{8D1A9F9F-5C6D-46C6-88F5-D30E5A116C59} = {F3C1FB6B-FF3D-4F82-8350-E6CA55707136}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64DBA51A-5765-49D3-A742-64C831EA64A7}
+	EndGlobalSection
+EndGlobal

@@ -4,23 +4,16 @@ namespace NewFeatures
 {
     class Program
     {
-        private static readonly int num1=5;
-        private static readonly int num2=6;
+        private static readonly int num1 = 5;
+        private static readonly int num2 = 6;
 
         static void Main(string[] args)
         {
-            //IndicesRanges();
-            ReadonlyMembers();
+            IndicesRanges();
+            //ReadonlyMembers();
+            //DefaultInterfaceMethods();
             Console.ReadKey();
         }
-
-        private static void ReadonlyMembers()
-        {
-            Console.WriteLine("\tReadonly members");
-            Console.WriteLine($"\t{Replicate('-', 25)}\n\n");
-            Console.WriteLine($"\tAdd {num1} + {num2} = {Add}");
-        }
-
         private static void IndicesRanges()
         {
             Console.WriteLine("\tIndices and Ranges");
@@ -50,8 +43,42 @@ namespace NewFeatures
             }
 
         }
+        private static void ReadonlyMembers()
+        {
+            Console.WriteLine("\tReadonly members");
+            Console.WriteLine($"\t{Replicate('-', 25)}\n\n");
+            Console.WriteLine($"\tAdd {num1} + {num2} = {Add}");
+        }
+        private static void DefaultInterfaceMethods()
+        {
+            Console.WriteLine("\tDefault interface methods");
+            Console.WriteLine($"\t{Replicate('-', 25)}\n\n");
+            IProduct product = new Product(1, "Design Patterns", 350.00M);
+            Console.WriteLine($"\t{product.ProductDesc()}");
 
+        }
         private static string Replicate(char repl = '-', int length = 5) => new string(repl, length);
         public static int Add => num1 + num2;
+
+        public interface IProduct
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public decimal Price { get; set; }
+            public string ProductDesc() => $"Book:{Name} has Price:{Price}";
+        }
+        public class Product : IProduct
+        {
+            public Product(int id, string name, decimal price)
+            {
+                Id = id;
+                Name = name;
+                Price = price;
+            }
+
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public decimal Price { get; set; }
+        }
     }
 }

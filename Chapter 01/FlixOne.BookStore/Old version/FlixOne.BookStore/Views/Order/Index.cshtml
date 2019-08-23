@@ -1,0 +1,43 @@
+﻿@model IEnumerable<FlixOne.BookStore.Models.OrderModel>
+
+@{
+    ViewBag.Title = "Order Tracking Dashboard";
+}
+
+<h2>Order Tracking Dashboard</h2>
+
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.OrderId)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderStatus)
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.OrderId)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderStatus)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new {id = item.OrderId}) 
+            </td>
+        </tr>
+    }
+
+</table>

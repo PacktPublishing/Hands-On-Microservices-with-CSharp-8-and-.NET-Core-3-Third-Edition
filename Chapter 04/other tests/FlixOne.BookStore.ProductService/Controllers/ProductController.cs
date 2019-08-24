@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using FlixOne.BookStore.ProductService.Models;
 using FlixOne.BookStore.ProductService.Persistence;
 using Microsoft.AspNetCore.Mvc;
@@ -14,11 +15,17 @@ namespace FlixOne.BookStore.ProductService.Controllers
     {
         private readonly IProductRepository _productRepository;
 
-        public ProductController(IProductRepository productRepository) => _productRepository = productRepository;
+        public ProductController(IProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+        }
 
         [HttpGet]
         [Route("productlist")]
-        public IActionResult GetList() => new OkObjectResult(_productRepository.GetAll().Select(ToProductvm).ToList());
+        public IActionResult GetList()
+        {
+            return new OkObjectResult(_productRepository.GetAll().Select(ToProductvm).ToList());
+        }
 
         [HttpGet]
         [Route("product/{productid}")]

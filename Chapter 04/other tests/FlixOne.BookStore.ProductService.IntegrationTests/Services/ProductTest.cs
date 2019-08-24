@@ -23,7 +23,7 @@ namespace FlixOne.BookStore.ProductService.IntegrationTests.Services
         public async Task ReturnProductList()
         {
             // Act
-            var response = await _client.GetAsync("api/product/productlist"); //change per setting
+            var response = await _client.GetAsync("api/product/productlist"); //change as per setting
             response.EnsureSuccessStatusCode();
 
             var responseString = await response.Content.ReadAsStringAsync();

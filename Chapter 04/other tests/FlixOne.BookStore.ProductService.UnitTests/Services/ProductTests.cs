@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using FlixOne.BookStore.ProductService.Controllers;
+﻿using FlixOne.BookStore.ProductService.Controllers;
 using FlixOne.BookStore.ProductService.Models;
 using FlixOne.BookStore.ProductService.Persistence;
 using FlixOne.BookStore.ProductService.UnitTests.Fake;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace FlixOne.BookStore.ProductService.UnitTests.Services

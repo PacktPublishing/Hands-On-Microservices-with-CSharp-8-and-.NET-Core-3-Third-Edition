@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace FlixOne.BookStore.ProductService.IntegrationTests
 {
-    public class TestStartup : Startup
+    public class TestStartup : FlixOne.BookStore.ProductService.Startup
     {
         public TestStartup(IConfiguration configuration) : base(configuration)
         {
@@ -21,7 +21,7 @@ namespace FlixOne.BookStore.ProductService.IntegrationTests
             services.AddMvc();
         }
 
-        public override void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public override void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
         }

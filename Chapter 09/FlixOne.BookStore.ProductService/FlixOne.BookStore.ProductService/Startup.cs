@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using FlixOne.BookStore.ProductService.Contexts;
 using FlixOne.BookStore.ProductService.Persistence;
 using Microsoft.AspNetCore.Builder;
@@ -9,7 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.Extensions.Hosting;
 
 namespace FlixOne.BookStore.ProductService
 {
@@ -28,35 +24,43 @@ namespace FlixOne.BookStore.ProductService
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddDbContext<ProductContext>(
                 o => o.UseSqlServer(Configuration.GetConnectionString("ProductConnection")));
-            services.AddMvc();
+
+            services.AddControllersWithViews();
+
             //Register Swagger
             services.AddSwaggerGen(swagger =>
             {
-                swagger.SwaggerDoc("v1", new Info { Title = "Product APIs", Version = "v1" });
+                swagger.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Product APIs", Version = "v1" });
             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseBrowserLink();
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
             }
-
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseMvc(routes =>
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute(
+                endpoints.MapControllerRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
 
@@ -64,6 +68,7 @@ namespace FlixOne.BookStore.ProductService
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Product API V1");
+
             });
         }
     }

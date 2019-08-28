@@ -2,11 +2,11 @@
 
 namespace ProductServiceClient
 {
-    internal class Program
+    class Program
     {
         private static void Main(string[] args)
         {
-            var client = new ProductServiceClientClient {BaseUri = new Uri("http://localhost:10139/")};
+            var client = new ProductServiceClientClient { BaseUri = new Uri("http://localhost:10139/") };
             var products = client.Product.Get();
             Console.WriteLine($"Total count {products.Count}");
             foreach (var product in products)

@@ -35,7 +35,7 @@ namespace FlixOne.BookStore.ProductService.Controllers
         /// <returns>A response with product list</returns>
         /// <response code="200">Returns the product list</response>
         /// <response code="401">Unauthorized request</response>
-        [HttpGet("list")]
+        [HttpGet("productlist")]
         [ProducesResponseType(typeof(IEnumerable<Product>), 200)]
         [ProducesResponseType(typeof(ErrorMessage),401)]
         public ActionResult<IEnumerable<Product>> GetProducts()

@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.BookStore.Web", "FlixOne.BookStore.Web\FlixOne.BookStore.Web.csproj", "{42A86DA9-A1E3-4949-8C0C-F570BC9F0DC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlixOne.BookStore.ProductService", "FlixOne.BookStore.ProductService\FlixOne.BookStore.ProductService.csproj", "{FB7B775A-04B0-418B-98D2-CEF8068555A2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{42A86DA9-A1E3-4949-8C0C-F570BC9F0DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42A86DA9-A1E3-4949-8C0C-F570BC9F0DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42A86DA9-A1E3-4949-8C0C-F570BC9F0DC9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB7B775A-04B0-418B-98D2-CEF8068555A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB7B775A-04B0-418B-98D2-CEF8068555A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB7B775A-04B0-418B-98D2-CEF8068555A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB7B775A-04B0-418B-98D2-CEF8068555A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

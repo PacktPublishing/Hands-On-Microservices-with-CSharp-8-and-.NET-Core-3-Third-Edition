@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  flixone.bookstore.productservice:
+    image: flixone.bookstore.productservice
+    build:
+      context: ./FlixOne.BookStore.ProductService
+      dockerfile: Dockerfile

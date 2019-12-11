@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="650"
+   height="450"
+   viewBox="0 0 171.97915 119.0625"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="B12258_11_2.svg"
+   inkscape:export-filename="D:\01 Bitbucket\06 PACKT\03 Hands-On-Microservices-with-C-8-and-.NET-Core-3.0-Third-Edition\Chapter 11\images\B12258_11_2.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <title
+     id="title4562">YourSafeHigh Level Architecture</title>
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="61"
+     inkscape:cy="225"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="false"
+     units="px" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>YourSafeHigh Level Architecture</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3.5197141,-170.67587)">
+    <g
+       id="g1228">
+      <rect
+         y="170.81311"
+         x="3.4348104"
+         height="119.0625"
+         width="171.97917"
+         id="rect198"
+         style="opacity:0.196;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.64583325;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:7.9374999, 2.64583330000000005;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <rect
+         y="177.78409"
+         x="18.624659"
+         height="27.322178"
+         width="36.429569"
+         id="rect1005"
+         style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.64583325;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:7.9374999, 2.6458333;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <rect
+         y="177.11771"
+         x="117.47321"
+         height="27.322178"
+         width="36.429573"
+         id="rect1005-6"
+         style="opacity:1;fill:#ff6600;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.64583325;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:7.93749999, 2.64583333;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <ellipse
+         ry="20.027666"
+         rx="21.532637"
+         cy="226.73151"
+         cx="85.770584"
+         id="path1022"
+         style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.75782394;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:8.27347163, 2.75782388;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <rect
+         y="261.30554"
+         x="69.159592"
+         height="23.768074"
+         width="36.429573"
+         id="rect1005-6-6"
+         style="opacity:1;fill:#800080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.46775365;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:7.40326125, 2.46775375;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <text
+         id="text1044"
+         y="228.60721"
+         x="66.287476"
+         style="font-style:normal;font-weight:normal;font-size:5.76560116px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:0.14414003"
+         xml:space="preserve"><tspan
+           style="fill:#ffd5d5;stroke-width:0.14414003"
+           y="228.60721"
+           x="66.287476"
+           id="tspan1042"
+           sodipodi:role="line">FlixOne Store</tspan></text>
+      <text
+         transform="scale(0.74672331,1.3391841)"
+         id="text1044-0"
+         y="144.93739"
+         x="28.895407"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.76974821px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:0.30909362"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.30909362"
+           y="144.93739"
+           x="28.895407"
+           id="tspan1084"
+           sodipodi:role="line">Manufacturers</tspan></text>
+      <text
+         id="text1044-0-8"
+         y="193.2946"
+         x="120.11098"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           y="193.2946"
+           x="120.11098"
+           id="tspan1064-3"
+           sodipodi:role="line"
+           style="stroke-width:0.26458332">Retailers</tspan></text>
+      <text
+         transform="scale(0.79983601,1.2502563)"
+         id="text1044-0-8-5"
+         y="220.68941"
+         x="95.259872"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:0.27203244"
+         xml:space="preserve"><tspan
+           y="220.68941"
+           x="95.259872"
+           id="tspan1202"
+           sodipodi:role="line">Buyers</tspan></text>
+      <g
+         id="g6"
+         transform="matrix(0.21622479,0,0,0.18871226,54.506781,163.68651)">
+        <g
+           id="g4">
+          <rect
+             id="rect2"
+             height="11.711"
+             width="290.65799"
+             style="fill:#030303"
+             y="139.474"
+             x="0" />
+        </g>
+      </g>
+      <g
+         id="g6-0"
+         transform="matrix(1.0053215e-4,0.04963601,-0.18871224,2.0141461e-5,112.95139,192.16787)">
+        <g
+           id="g4-6">
+          <rect
+             id="rect2-1"
+             height="11.711"
+             width="290.65799"
+             style="fill:#030303"
+             y="139.474"
+             x="0" />
+        </g>
+      </g>
+      <text
+         id="text1044-4"
+         y="187.70529"
+         x="72.426659"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.14414005"
+         xml:space="preserve"><tspan
+           y="187.70529"
+           x="72.426659"
+           id="tspan1159"
+           sodipodi:role="line">Sellers</tspan></text>
+      <g
+         id="g6-0-4"
+         transform="matrix(1.0053215e-4,0.04887178,-0.18871224,1.9831351e-5,113.56349,246.75875)">
+        <g
+           id="g4-6-8">
+          <rect
+             id="rect2-1-2"
+             height="11.711"
+             width="290.65799"
+             style="fill:#030303"
+             y="139.474"
+             x="0" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

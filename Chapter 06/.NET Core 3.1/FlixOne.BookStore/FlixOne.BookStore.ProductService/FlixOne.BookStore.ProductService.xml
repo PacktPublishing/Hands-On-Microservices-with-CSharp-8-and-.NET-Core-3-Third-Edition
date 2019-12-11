@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlixOne.BookStore.ProductService</name>
+    </assembly>
+    <members>
+        <member name="M:FlixOne.BookStore.ProductService.Controllers.ProductController.GetProducts">
+            <summary>
+            Retrieve products
+            </summary>
+            <returns>A response with product list</returns>
+            <response code="200">Returns the product list</response>
+            <response code="401">Unauthorized request</response>
+        </member>
+        <member name="M:FlixOne.BookStore.ProductService.Controllers.ProductController.GetSingleProduct(System.String)">
+            <summary>
+            Retrieves a product by ID
+            </summary>
+            <param name="id">Priduct id</param>
+            <returns>A response with Product</returns>
+            <response code="200">Returns the Product</response>
+            <response code="401">Unauthorized request</response>
+        </member>
+        <member name="M:FlixOne.BookStore.ProductService.Controllers.ProductController.PostProduct(FlixOne.BookStore.ProductService.Models.Product)">
+            <summary>
+            Create a new product
+            </summary>
+            <param name="product">Product model</param>
+            <returns>A response with new product</returns>
+            <response code="200">Returns the product list</response>
+            <response code="401">Unauthorized request</response>
+        </member>
+    </members>
+</doc>

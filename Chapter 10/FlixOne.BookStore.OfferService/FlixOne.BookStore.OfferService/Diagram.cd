@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FlixOne.Offer.Service.Services.DealService" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAiBAABAAAAAEAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Services\DealService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FlixOne.Offer.Service.Services.VendorService" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAgBAABAAAAAAIAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>Services\VendorService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FlixOne.Offer.Service.Persistence.OfferRepository">
+    <Position X="3.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\OfferRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_dealService" />
+      <Field Name="_vendorService" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FlixOne.Offer.Service.Models.Offer">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kBACCAAAEAAIAABAAgCAAAAAAAAAAAAAAgABAAAAgAA=</HashCode>
+      <FileName>Models\Offer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_deal" />
+      <Field Name="_vendor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FlixOne.Offer.Service.Models.Deal">
+    <Position X="11" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAgAAAAAAAAAAQAAAAKABAAAAAAAAABAAA=</HashCode>
+      <FileName>Models\Deal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlixOne.Offer.Service.Models.Vendor">
+    <Position X="11" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAAAEgAAAAAAAgAAQAACAAAAAiAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Vendor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlixOne.Offer.Service.Controllers.OfferController">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\OfferController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="FlixOne.Offer.Service.Services.IDealService">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAACAAABAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\IDealService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FlixOne.Offer.Service.Services.IVendorService">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAABAAAAAAIAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\IVendorService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FlixOne.Offer.Service.Persistence.IOfferRepository">
+    <Position X="3.25" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\IOfferRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

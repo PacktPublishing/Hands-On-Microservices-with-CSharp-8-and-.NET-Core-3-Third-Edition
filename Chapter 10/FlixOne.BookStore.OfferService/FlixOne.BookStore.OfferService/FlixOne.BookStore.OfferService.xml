@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlixOne.BookStore.OfferService</name>
+    </assembly>
+    <members>
+        <member name="M:FlixOne.BookStore.OfferService.Controllers.OfferController.#ctor(FlixOne.BookStore.OfferService.Persistence.IOfferRepository)">
+            <summary>
+            
+            </summary>
+            <param name="offerRepository"></param>
+        </member>
+        <member name="M:FlixOne.BookStore.OfferService.Controllers.OfferController.GetOffer(System.String,System.String)">
+            <summary>
+            Returns offer by vendor
+            </summary>
+            <param name="dealId">Deal Id</param>
+            <param name="vendorId">Vendor Id</param>
+            <returns>Returns offer by vendor</returns>
+            <response code="200">Returns offer by vendor</response>
+        </member>
+    </members>
+</doc>

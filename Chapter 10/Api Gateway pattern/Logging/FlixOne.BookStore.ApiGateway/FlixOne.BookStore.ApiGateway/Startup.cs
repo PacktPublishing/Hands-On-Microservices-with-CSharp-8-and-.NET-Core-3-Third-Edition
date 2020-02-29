@@ -60,8 +60,8 @@ namespace FlixOne.BookStore.ApiGateway
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
-            app.UseOcelot();
-            loggerFactory.AddLog4Net();
+             loggerFactory.AddLog4Net();
+            app.UseOcelot().Wait();
         }
     }
 }

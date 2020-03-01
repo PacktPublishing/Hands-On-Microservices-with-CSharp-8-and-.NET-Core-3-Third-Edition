@@ -1,0 +1,45 @@
+{
+  "ReRoutes": [
+    //offer Service Routes
+    {
+      "DownstreamPathTemplate": "/api/offer/byproduct/{productid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44337
+        }
+      ],
+      "UpstreamPathTemplate": "/mobile/offer/product/{productid}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "offer"
+    },
+    //Product Service Route
+
+    {
+      "DownstreamPathTemplate": "/api/product/{productid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44338
+        }
+      ],
+      "UpstreamPathTemplate": "/mobile/product/{productid}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "product"
+    }
+  ],
+  "Aggregates": [
+    {
+      "ReRouteKeys": [
+        "offer",
+        "product"
+      ],
+      "UpstreamPathTemplate": "/mobile/productlist/{productid}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:44341"
+  }
+}

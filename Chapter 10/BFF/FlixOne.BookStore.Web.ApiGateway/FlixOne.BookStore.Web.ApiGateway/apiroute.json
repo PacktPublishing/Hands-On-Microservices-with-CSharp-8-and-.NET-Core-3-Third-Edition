@@ -1,0 +1,45 @@
+{
+  "ReRoutes": [
+    //Vendor Service Route
+    {
+      "DownstreamPathTemplate": "/api/Vendor/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44339
+        }
+      ],
+      "UpstreamPathTemplate": "/vendor/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "vendor"
+    },
+    //Product Service Routes
+    {
+      "DownstreamPathTemplate": "/api/product/byvendorid/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44338
+        }
+      ],
+      "UpstreamPathTemplate": "/product/byvendorid/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "product"
+    }
+
+  ],
+  "Aggregates": [
+    {
+      "ReRouteKeys": [
+        "product",
+        "vendor"
+      ],
+      "UpstreamPathTemplate": "/productlist/{id}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:44340"
+  }
+}

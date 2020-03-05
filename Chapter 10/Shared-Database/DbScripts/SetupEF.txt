@@ -1,0 +1,2 @@
+Add-Migration FlixOneUsersDB
+Update-Database

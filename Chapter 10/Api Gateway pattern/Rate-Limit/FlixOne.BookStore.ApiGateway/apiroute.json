@@ -159,8 +159,8 @@
     "RequestIdkey": "requestId",
     "RateLimitOptions": {
       "DisableRateLimitHeaders": false,
-      "QuotaExceededMessage": "Quota exceeded",
-      "HttpStatusCode": 999
+      "QuotaExceededMessage": "Quota exceeded! Please wait for 5 Seconds before you make next request.",
+      "HttpStatusCode": 901
     }
   }
 }

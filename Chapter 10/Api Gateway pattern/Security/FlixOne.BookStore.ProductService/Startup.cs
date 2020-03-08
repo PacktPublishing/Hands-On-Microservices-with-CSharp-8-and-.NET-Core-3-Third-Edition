@@ -31,9 +31,9 @@ namespace FlixOne.BookStore.ProductService
             {
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = signingKey,
-                ValidateIssuer = true,
+                ValidateIssuer = false,
                 ValidIssuer = jwtConfig["ValidIssuer"],
-                ValidateAudience = true,
+                ValidateAudience = false,
                 ValidAudience = jwtConfig["ValidAudience"],
                 ValidateLifetime = true,
                 ClockSkew = TimeSpan.Zero,
@@ -85,6 +85,7 @@ namespace FlixOne.BookStore.ProductService
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

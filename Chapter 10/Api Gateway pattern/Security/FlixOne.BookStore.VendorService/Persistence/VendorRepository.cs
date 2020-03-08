@@ -20,7 +20,10 @@ namespace FlixOne.BookStore.VendorService.Persistence
 
         public List<Models.Vendor> GetAll() => _context.Vendors.Include(c => c.Addresses).ToList();
 
-        public Models.Vendor GetBy(Guid id) => _context.Vendors.Include(c => c.Addresses).FirstOrDefault(a => a.Id == id);
+        public Models.Vendor GetBy(Guid id)
+        {
+            return _context.Vendors.Include(c => c.Addresses).FirstOrDefault(a => a.Id == id);
+        }
 
         public void Remove(Guid id)
         {

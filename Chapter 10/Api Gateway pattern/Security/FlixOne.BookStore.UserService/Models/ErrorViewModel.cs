@@ -11,29 +11,17 @@ namespace FlixOne.BookStore.UserService.Models
     }
     public class ErrorResponseModel
     {
-
         public int Code { get; set; }
         public string Message { get; set; }
         public string Exception { get; set; }
-
-        // other fields
-
-        public override string ToString()
-        {
-            return JsonSerializer.Serialize(this);
-        }
+        public override string ToString() => JsonSerializer.Serialize(this);
     }
     public class SuccessResponseModel
     {
-
         public int Code { get; set; }
         public string Message { get; set; }
+        public object Result { get; set; }
 
-        // other fields
-
-        public override string ToString()
-        {
-            return JsonSerializer.Serialize(this);
-        }
+        public override string ToString() => JsonSerializer.Serialize(this);
     }
 }

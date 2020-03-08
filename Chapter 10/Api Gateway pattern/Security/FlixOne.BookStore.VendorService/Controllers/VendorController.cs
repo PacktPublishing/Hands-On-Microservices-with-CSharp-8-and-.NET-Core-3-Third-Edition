@@ -33,7 +33,12 @@ namespace FlixOne.BookStore.VendorService.Controllers
         /// <returns></returns>
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public ActionResult<Models.VendorViewModel> Get(string id) => _vendorRepository.GetBy(new Guid(id)).ToViewModel();
+        public ActionResult<Models.VendorViewModel> Get(string id)
+        {
+            var model = _vendorRepository.GetBy(new Guid(id));
+            var viewModel = model.ToViewModel();
+            return viewModel;
+        }
 
         /// <summary>
         /// Add new vendor

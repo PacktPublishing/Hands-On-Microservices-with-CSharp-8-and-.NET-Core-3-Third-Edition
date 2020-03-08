@@ -40,9 +40,9 @@ namespace FlixOne.BookStore.ApiGateway
             {
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = signingKey,
-                ValidateIssuer = true,
+                ValidateIssuer = false,
                 ValidIssuer = jwtConfig["ValidIssuer"],
-                ValidateAudience = true,
+                ValidateAudience = false,
                 ValidAudience = jwtConfig["ValidAudience"],
                 ValidateLifetime = true,
                 ClockSkew = TimeSpan.Zero,
@@ -81,7 +81,7 @@ namespace FlixOne.BookStore.ApiGateway
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

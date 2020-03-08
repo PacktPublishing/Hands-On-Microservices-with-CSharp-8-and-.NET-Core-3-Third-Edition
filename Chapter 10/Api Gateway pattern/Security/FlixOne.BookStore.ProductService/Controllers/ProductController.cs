@@ -16,7 +16,7 @@ namespace FlixOne.BookStore.ProductService.Controllers
         {
             _productRepository = productRepository;
         }
-
+        //[Authorize]
         [HttpGet]
         [Route("productlist")]
         public IActionResult GetList()
@@ -25,16 +25,16 @@ namespace FlixOne.BookStore.ProductService.Controllers
         }
 
         [HttpGet]
-        [Authorize]
-        [Route("product/{productid}")]
-        public IActionResult Get(string productId)
+        //[Authorize]
+        [Route("{productid}")]
+        public IActionResult Get(string productid)
         {
-            var productModel = _productRepository.GetBy(new Guid(productId));
+            var productModel = _productRepository.GetBy(new Guid(productid));
 
             return new OkObjectResult(ToProductvm(productModel));
         }
         [HttpGet]
-        [Route("product/byvendorid/{id}")]
+        [Route("byvendorid/{id}")]
         public IActionResult GetProductList(string id)
         {
             return new OkObjectResult(_productRepository.GetByVendorId(new Guid(id)).Select(ToProductvm).ToList());

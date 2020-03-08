@@ -14,19 +14,9 @@ namespace FlixOne.BookStore.UserService.Utility
     public class TokenUtility : ITokenUtility
     {
         Settings _options;
-        public TokenUtility(IOptions<Settings> options)
-        {
-            _options = options.Value;
-
-        }
-        public string JwtSecurityTokenSerialized(JwtSecurityToken token)
-        {
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
-        public JwtSecurityToken GenerateToken(User user, bool isLong = false)
-        {
-            return JwtSecurityToken(user, isLong);
-        }
+        public TokenUtility(IOptions<Settings> options) => _options = options.Value;
+        public string JwtSecurityTokenSerialized(JwtSecurityToken token) => new JwtSecurityTokenHandler().WriteToken(token);
+        public JwtSecurityToken GenerateToken(User user, bool isLong = false) => JwtSecurityToken(user, isLong);
         private JwtSecurityToken JwtSecurityToken(User user, bool isLong = false)
         {
             var jwtKey = _options.JwtKey;
@@ -47,9 +37,7 @@ namespace FlixOne.BookStore.UserService.Utility
                 new Claim(JwtRegisteredClaimNames.Email, user.EmailId),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToUnixEpochDate().ToString(),
                     ClaimValueTypes.Integer64)
-            });
-
-                  
+            });                  
 
             var token = new JwtSecurityToken(tokenIssuer, audience, claims, notBefore, expires, signingCredentials);
             return token;

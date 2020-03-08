@@ -2,10 +2,7 @@
 {
     public static class StringExtension
     {
-        public static int ToInt32(this string Expr, int DefaultValue = 0)
-        {
-            return ToInt32Nullable(Expr) ?? DefaultValue;
-        }
+        public static int ToInt32(this string Expr, int DefaultValue = 0) => ToInt32Nullable(Expr) ?? DefaultValue;
         public static int? ToInt32Nullable(this string Expr)
         {
             int? result = null;
@@ -22,11 +19,6 @@
 
             return result;
         }
-        public static bool IsNullOrEmpty(this string Expr)
-        {
-            var result = string.IsNullOrEmpty(Expr);
-
-            return result;
-        }
+        public static bool IsNullOrEmpty(this string Expr) => string.IsNullOrEmpty(Expr);
     }
 }

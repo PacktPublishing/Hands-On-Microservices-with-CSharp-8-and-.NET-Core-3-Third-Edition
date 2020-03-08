@@ -42,7 +42,7 @@ namespace FlixOne.BookStore.ProductService
             //Register Swagger
             services.AddSwaggerGen(swagger =>
             {
-                swagger.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Product APIs", Version = "v1" });
+                swagger.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Vendor APIs", Version = "v1" });
             });
         }
 
@@ -81,7 +81,7 @@ namespace FlixOne.BookStore.ProductService
 
             app.UseSwaggerUI(option =>
             {
-                option.SwaggerEndpoint("/swagger/v1/swagger.json", "Product API V1");
+                option.SwaggerEndpoint("/swagger/v1/swagger.json", "Vendor API V1");
             });
         }
     }

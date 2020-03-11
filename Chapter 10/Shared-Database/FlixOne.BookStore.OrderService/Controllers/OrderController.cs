@@ -18,10 +18,7 @@ namespace FlixOne.BookStore.OrderService.Controllers
         /// Order
         /// </summary>
         /// <param name="orderRepository"></param>
-        public OrderController(IOrderRepository orderRepository)
-        {
-            _orderRepository = orderRepository;
-        }
+        public OrderController(IOrderRepository orderRepository) => _orderRepository = orderRepository;
 
         // GET: api/<controller>
         /// <summary>
@@ -46,21 +43,13 @@ namespace FlixOne.BookStore.OrderService.Controllers
         /// </summary>
         /// <param name="OViewModel">Order object</param>
         [HttpPost]
-        public void Add([FromBody]OrderViewModel OViewModel)
-        {
-            var model = OViewModel.ToModel();
-            _orderRepository.Add(model);
-        }
+        public void Add([FromBody]OrderViewModel OViewModel) => _orderRepository.Add(OViewModel.ToModel());
 
         /// <summary>
         /// Add new order item to an existing order
         /// </summary>
         /// <param name="item"></param>
         [HttpPost("OrderItem")]
-        public void AddItem([FromBody]OrderItemViewModel item)
-        {
-            var model = item.ToModel();
-            _orderRepository.AddOrderItem(model);
-        }
+        public void AddItem([FromBody]OrderItemViewModel item) => _orderRepository.AddOrderItem(item.ToModel());
     }
 }

@@ -15,7 +15,6 @@ namespace FlixOne.BookStore.OrderService.Models
         public decimal Tax { get; set; }
         public decimal WalletBalance { get; set; }
         public decimal NetPay { get { return (Total + Tax) - WalletBalance; } }
-
         public IEnumerable<OrderItemViewModel> Items { get; set; }
     }
     public class OrderItemViewModel

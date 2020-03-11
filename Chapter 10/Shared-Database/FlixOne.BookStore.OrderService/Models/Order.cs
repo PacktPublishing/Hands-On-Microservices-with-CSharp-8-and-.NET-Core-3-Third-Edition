@@ -21,7 +21,5 @@ namespace FlixOne.BookStore.OrderService.Models
         public decimal Tax { get; set; }
         public decimal NetPay { get; set; }
         public IEnumerable<OrderItem> Items { get; set; }
-
-        
     }
 }

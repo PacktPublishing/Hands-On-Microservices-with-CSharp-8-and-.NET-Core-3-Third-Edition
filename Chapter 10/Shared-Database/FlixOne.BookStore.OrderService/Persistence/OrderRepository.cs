@@ -12,20 +12,11 @@ namespace FlixOne.BookStore.OrderService.Persistence
     public class OrderRepository:IOrderRepository
     {
         private readonly OrderContext _context;
-        public OrderRepository(OrderContext context)
-        {
-            _context = context;
-        }
+        public OrderRepository(OrderContext context) => _context = context;
 
-        public IEnumerable<Models.Order> List()
-        {
-            return _context.Orders.Include(o=>o.Items).ToList();
-        }
+        public IEnumerable<Models.Order> List() => _context.Orders.Include(o => o.Items).ToList();
 
-        public Models.Order Get(Guid id)
-        {
-            return _context.Orders.Include(o => o.Items).FirstOrDefault(o => o.Id == id);
-        }
+        public Models.Order Get(Guid id) => _context.Orders.Include(o => o.Items).FirstOrDefault(o => o.Id == id);
         public void Add(Models.Order order)
         {
             using (var transaction = _context.Database.BeginTransaction())

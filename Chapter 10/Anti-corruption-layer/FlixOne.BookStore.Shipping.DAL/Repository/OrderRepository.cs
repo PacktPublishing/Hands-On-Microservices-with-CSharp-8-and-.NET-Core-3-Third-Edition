@@ -11,27 +11,12 @@ namespace FlixOne.BookStore.Shipping.DAL.Repository
     {
         private readonly ShipmentDbContext _context;
 
-        public OrderRepository()
-        {
-            _context = Context();
-        }
-        public OrderRepository(ShipmentDbContext context)
-        {
-            _context = context;
-        }
+        public OrderRepository() => _context = Context();
+        public OrderRepository(ShipmentDbContext context) => _context = context;
 
-        public IEnumerable<OrderItem> AssociatedItems(Guid orderId)
-        {
-            return _context.OrderItems.Where(o => o.OrderId == orderId).ToList();
-        }
-        public Order Get(Guid orderId)
-        {
-            return _context.Orders.Include(o => o.Items).Where(o => o.Id == orderId).FirstOrDefault();
-        }
-        public void Add(Order order)
-        {
-            _context.Add(order);
-        }
+        public IEnumerable<OrderItem> AssociatedItems(Guid orderId) => _context.OrderItems.Where(o => o.OrderId == orderId).ToList();
+        public Order Get(Guid orderId) => _context.Orders.Include(o => o.Items).Where(o => o.Id == orderId).FirstOrDefault();
+        public void Add(Order order) => _context.Add(order);
         public IEnumerable<Guid> OrdersForProduct(Guid productId) => _context.OrderItems.Where(o => o.ProductId == productId).Select(o => o.OrderId).Distinct().ToList();
 
         private ShipmentDbContext Context()

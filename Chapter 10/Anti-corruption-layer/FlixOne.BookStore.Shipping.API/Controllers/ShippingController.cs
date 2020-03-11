@@ -48,9 +48,7 @@ namespace FlixOne.BookStore.Shipping.API.Controllers
         }
 
         [HttpGet("product/{id}")]
-        public ShippingViewModel ByProduct(string id) {
-            return _repository.Get(new Guid(id)).ToViewModel();
-        }
+        public ShippingViewModel ByProduct(string id) => _repository.Get(new Guid(id)).ToViewModel();
 
     }
 }

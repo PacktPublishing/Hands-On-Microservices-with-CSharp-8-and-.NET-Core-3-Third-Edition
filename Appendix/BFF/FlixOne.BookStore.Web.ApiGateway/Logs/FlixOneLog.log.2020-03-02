@@ -1,0 +1,37 @@
+2020-03-02 02:22:22,200  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-03-02 02:22:22,208  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-03-02 02:22:22,208  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-03-02 02:22:22,208  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Development
+ 2020-03-02 02:22:22,208  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: D:\Chapter 10\BFF\FlixOne.BookStore.Web.ApiGateway\FlixOne.BookStore.Web.ApiGateway
+ 2020-03-02 02:24:46,834  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application is shutting down...
+ 2020-03-02 02:26:05,942  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-03-02 02:26:05,951  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-03-02 02:26:05,951  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-03-02 02:26:05,951  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Development
+ 2020-03-02 02:26:05,951  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: D:\Chapter 10\BFF\FlixOne.BookStore.Web.ApiGateway\FlixOne.BookStore.Web.ApiGateway
+ 2020-03-02 02:47:05,187  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application is shutting down...
+ 2020-03-02 02:57:56,488  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-03-02 02:57:56,497  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-03-02 02:57:56,497  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-03-02 02:57:56,497  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Production
+ 2020-03-02 02:57:56,497  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: D:\Chapter 10\BFF\FlixOne.BookStore.Web.ApiGateway\FlixOne.BookStore.Web.ApiGateway
+ 2020-03-02 02:59:15,539  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application is shutting down...
+ 2020-03-02 02:59:28,296  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-03-02 02:59:28,304  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-03-02 02:59:28,305  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-03-02 02:59:28,305  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Production
+ 2020-03-02 02:59:28,305  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: D:\Chapter 10\BFF\FlixOne.BookStore.Web.ApiGateway\FlixOne.BookStore.Web.ApiGateway
+ 2020-03-02 03:01:00,933  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application is shutting down...
+ 2020-03-02 03:08:18,900  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-03-02 03:08:18,909  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-03-02 03:08:18,910  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-03-02 03:08:18,910  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Development
+ 2020-03-02 03:08:18,910  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: D:\Chapter 10\BFF\FlixOne.BookStore.Web.ApiGateway\FlixOne.BookStore.Web.ApiGateway
+ 2020-03-02 03:08:31,845  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application is shutting down...
+ 2020-03-02 03:09:31,901  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-03-02 03:09:31,909  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-03-02 03:09:31,910  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-03-02 03:09:31,910  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Hosting environment: Development
+ 2020-03-02 03:09:31,910  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Content root path: D:\Chapter 10\BFF\FlixOne.BookStore.Web.ApiGateway\FlixOne.BookStore.Web.ApiGateway
+ 2020-03-02 03:09:37,380  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Application is shutting down...
+ 

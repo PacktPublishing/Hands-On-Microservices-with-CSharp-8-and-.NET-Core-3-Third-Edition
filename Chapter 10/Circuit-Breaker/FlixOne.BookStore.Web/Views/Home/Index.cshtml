@@ -1,0 +1,88 @@
+﻿@model IEnumerable<FlixOne.BookStore.Web.Models.ProductViewModel>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="border-info">
+    <p>To test code try this:</p>
+    <ul>
+        <li> Stop <em>Product service</em> and run the project, you should see the message.</li>
+        <li> Start <em>Product Service</em>, you will get the product listing.</li>
+    </ul>
+
+</div>
+<br />
+@if (ViewBag.ProductServiceInActiveMsg != null)
+{
+    <br />
+    <div class="border-info">
+        <p> The following message is because Product service is faulty, please make sure product service is working properly.</p>
+    </div>
+    <br />
+    <div class="alert alert-danger" role="alert">
+        &nbsp;@ViewBag.ProductServiceInActiveMsg
+    </div>
+}
+else
+{
+    <h4>Product Listing</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductImage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductPrice)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.CategoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CategoryDescription)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.HiddenFor(modelItem => item.ProductId)
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductImage)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductPrice)
+                    </td>
+
+                    <td>
+                        @Html.HiddenFor(modelItem => item.CategoryId)
+                        @Html.DisplayFor(modelItem => item.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CategoryDescription)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.ProductId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

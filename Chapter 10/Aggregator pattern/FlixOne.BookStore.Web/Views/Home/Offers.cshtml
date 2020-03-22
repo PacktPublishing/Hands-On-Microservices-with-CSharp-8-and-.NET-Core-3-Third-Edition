@@ -1,0 +1,104 @@
+﻿@model IEnumerable<FlixOne.BookStore.Web.Models.OfferViewModel>
+
+@{
+    ViewData["Title"] = "Offers";
+}
+
+<h1>Offers</h1>
+<br />
+@if (ViewBag.ServiceInActiveMsg != null)
+{
+    <br />
+    <div class="border-info">
+        <p> The following message is because Offer service is faulty, please make sure offer service is working properly.</p>
+    </div>
+    <br />
+    <div class="alert alert-danger" role="alert">
+        &nbsp;@ViewBag.ProductServiceInActiveMsg
+    </div>
+}
+else
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OfferCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OfferDetails)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OfferBanner)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Discount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OfferValidTill)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendroName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AccessURL)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorLogo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorAddress)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OfferCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OfferDetails)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OfferBanner)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Discount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OfferValidTill)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VendorCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VendroName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AccessURL)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VendorLogo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VendorAddress)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

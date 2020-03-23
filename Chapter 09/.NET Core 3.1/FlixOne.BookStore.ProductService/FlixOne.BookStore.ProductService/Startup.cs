@@ -25,7 +25,10 @@ namespace FlixOne.BookStore.ProductService
             services.AddDbContext<ProductContext>(
                 o => o.UseSqlServer(Configuration.GetConnectionString("ProductConnection")));
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                .AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+    );
 
             //Register Swagger
             services.AddSwaggerGen(swagger =>

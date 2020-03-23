@@ -47,7 +47,7 @@ namespace ProductServiceClient
             : base()
         {
             this._product = new ProductOperations(this);
-            this._baseUri = new Uri("http://localhost:5137");
+            this._baseUri = new Uri("http://localhost:51410");
         }
         
         /// <summary>
@@ -61,7 +61,7 @@ namespace ProductServiceClient
             : base(handlers)
         {
             this._product = new ProductOperations(this);
-            this._baseUri = new Uri("http://localhost:10139");
+            this._baseUri = new Uri("http://localhost:51410");
         }
         
         /// <summary>
@@ -78,7 +78,7 @@ namespace ProductServiceClient
             : base(rootHandler, handlers)
         {
             this._product = new ProductOperations(this);
-            this._baseUri = new Uri("http://localhost:10139");
+            this._baseUri = new Uri("http://localhost:51410");
         }
         
         /// <summary>

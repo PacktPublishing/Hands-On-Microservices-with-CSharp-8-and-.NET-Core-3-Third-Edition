@@ -11,7 +11,7 @@ namespace FlixOne.BookStore.ApiGateway
 {
     public class Startup
     {
-       public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration)
         {
             Configuration = BuilConfiguration(configuration);
 
@@ -44,7 +44,6 @@ namespace FlixOne.BookStore.ApiGateway
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
@@ -60,7 +59,7 @@ namespace FlixOne.BookStore.ApiGateway
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
-             loggerFactory.AddLog4Net();
+            loggerFactory.AddLog4Net();
             app.UseOcelot().Wait();
         }
     }

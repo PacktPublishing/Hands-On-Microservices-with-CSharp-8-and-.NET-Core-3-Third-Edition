@@ -6,6 +6,7 @@ using FlixOne.BookStore.Web.Services;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Polly.CircuitBreaker;
+using System;
 
 namespace FlixOne.BookStore.Web.Controllers
 {
@@ -36,7 +37,7 @@ namespace FlixOne.BookStore.Web.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
         
-        public async Task<IActionResult> Offers([FromQuery] string dealId, [FromQuery] string vendorId)
+        public async Task<IActionResult> Offers([FromQuery(Name ="id1")] string dealId, [FromQuery(Name = "id2")] string vendorId)
         {
             var offers = new List<OfferViewModel>();
             try
@@ -44,17 +45,17 @@ namespace FlixOne.BookStore.Web.Controllers
                 offers = await _offerService.ListOffers(new System.Guid(dealId),new System.Guid(vendorId));
                 return View(offers);
             }
-            catch (BrokenCircuitException)
+            catch (BrokenCircuitException ex)
             {
 
-                LetClientKnowThatServiceIsNotAvailable();
+                LetClientKnowThatServiceIsNotAvailable(ex);
             }
             return View(offers);
         }
 
-        private void LetClientKnowThatServiceIsNotAvailable()
+        private void LetClientKnowThatServiceIsNotAvailable(Exception ex)
         {
-            ViewBag.ServiceInActiveMsg = "Please check, all services should be running.";
+            ViewBag.ServiceInActiveMsg = $"Please check, all services should be running. {ex.GetType().Name}, {ex.Message}";
         }
     }
 }

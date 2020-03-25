@@ -26,7 +26,7 @@ dotnet run
 - Browse `http://localhost:5000` in your preferred browser and test the application.
 - Once tested the application, press `Ctrl + C` to stop the application.
 
-## Build an ASP.NET Core image
+## Build and run using an ASP.NET Core image
 
 After testing the application locally, now, its time to build and run the application using .NET Core-based container image. To do so, follow these steps: 
 

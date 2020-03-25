@@ -46,7 +46,7 @@ docker ps -q | xargs -n 1 docker inspect --format '{{ .Name }} {{range .NetworkS
 
 The previous command gives the IP  `192.168.99.100` (would be different for you). Now, browse `http://192.168.99.100:9100` and test the application.
 
-## Build and run using `Docker-Compose`
+## Build and run using `docker-compose`
 
 You would notice `docker-compose.yml` and `docker-compose.override.yml` files. You can now, also use `docker-compose`. Tod do so, follow these steps:
 
@@ -63,6 +63,6 @@ You will see that it builds project `FlixOne.BookStore.ProductService`. Make sur
 docker-compose up
 ```
 
-The previous command creates and start containers, you can verify the containers with command `docker-compose ps` Now, browse `http://192.168.99.100:9100` andtest the application.
+The previous command creates and start containers, you can verify the containers with command `docker-compose ps` Now, browse `http://192.168.99.100:9109` andtest the application.
 
 > Note: For production-ready application, you would require different configurations, it is good idea to add different `docker-compose.yml` for different environment. For an example: `docker-compose.production.yml` would be the best suitable file for `Production` environment.

@@ -31,7 +31,7 @@ dotnet run
 After testing the application locally, now, its time to build and run the application using .NET Core-based container image. To do so, follow these steps: 
 
 - Make sure, you're in the solution folder at `/.NET Core 3.1`.
-- From console run the following comman, it will build nad run `FlixOne.BookStore.ProductService` in Docker:
+- From console run the following command, it will build and run `FlixOne.BookStore.ProductService` in Docker:
 
 ```console
 docker build --pull -t flixoneproductservice .
@@ -45,3 +45,24 @@ docker ps -q | xargs -n 1 docker inspect --format '{{ .Name }} {{range .NetworkS
 ```
 
 The previous command gives the IP  `192.168.99.100` (would be different for you). Now, browse `http://192.168.99.100:9100` and test the application.
+
+## Build and run using `Docker-Compose`
+
+You would notice `docker-compose.yml` and `docker-compose.override.yml` files. You can now, also use `docker-compose`. Tod do so, follow these steps:
+
+- Make sure, you're in the solution folder at `/.NET Core 3.1`.
+- From console run the following command:
+
+```console
+docker-compose build
+```
+
+You will see that it builds project `FlixOne.BookStore.ProductService`. Make sure, there would not be any build errors. Now, run following command:
+
+```console
+docker-compose up
+```
+
+The previous command creates and start containers, you can verify the containers with command `docker-compose ps` Now, browse `http://192.168.99.100:9100` andtest the application.
+
+> Note: For production-ready application, you would require different configurations, it is good idea to add different `docker-compose.yml` for different environment. For an example: `docker-compose.production.yml` would be the best suitable file for `Production` environment.

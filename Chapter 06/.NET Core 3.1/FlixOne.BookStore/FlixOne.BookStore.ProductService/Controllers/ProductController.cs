@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Concurrent;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using FlixOne.BookStore.ProductService.Models;
-using Microsoft.AspNetCore.Http;
+﻿using FlixOne.BookStore.ProductService.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace FlixOne.BookStore.ProductService.Controllers
 {
@@ -40,9 +38,11 @@ namespace FlixOne.BookStore.ProductService.Controllers
         [ProducesResponseType(typeof(ErrorMessage),401)]
         public ActionResult<IEnumerable<Product>> GetProducts()
         {
-            if (IsRequestAuthorized())
-                return products.Values.Where(p => p.CreatedBy == User.Identity.Name).ToList();
-            return Unauthorized(new ErrorMessage { Id = Guid.NewGuid(), StatusCode = StatusCodes.Status401Unauthorized, Error = "User is not authorized." });
+            //if (IsRequestAuthorized())
+            //    return products.Values.Where(p => p.CreatedBy == User.Identity.Name).ToList();
+            //return Unauthorized(new ErrorMessage { Id = Guid.NewGuid(), StatusCode = StatusCodes.Status401Unauthorized, Error = "User is not authorized." });
+
+            return products.Values.ToList();
         }
 
 

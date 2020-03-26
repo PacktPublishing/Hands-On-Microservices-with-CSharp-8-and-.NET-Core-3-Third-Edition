@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Identity.Web;
 using System;
 using System.IO;
 using System.Reflection;
@@ -22,8 +24,11 @@ namespace FlixOne.BookStore.ProductService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Adds Microsoft Identity platform (AAD v2.0) support to protect this Api
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddProtectedWebApi("AzureAd", Configuration, options => Configuration.Bind("AzureAD", options));
             services.AddControllers();
-
+            services.AddHttpContextAccessor();
             services.AddSwaggerGen(op =>
             {
                 op.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Product API", Version = "v1" });

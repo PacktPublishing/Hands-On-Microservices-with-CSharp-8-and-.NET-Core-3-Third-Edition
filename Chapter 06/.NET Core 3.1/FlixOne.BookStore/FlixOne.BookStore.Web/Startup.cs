@@ -1,13 +1,15 @@
-using FlixOne.BookStore.Web.Utilities;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
+using FlixOne.BookStore.Web.Services;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
+using Microsoft.Identity.Web;
+using Microsoft.Identity.Web.TokenCacheProviders.InMemory;
+using Microsoft.Identity.Web.UI;
 
 namespace FlixOne.BookStore.Web
 {
@@ -23,16 +25,27 @@ namespace FlixOne.BookStore.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddOptions();
             //uncomment this as and when required
-            //services.AddAuthentication(sharedOptions =>
-            //{
-            //    sharedOptions.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-            //    sharedOptions.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
-            //}).AddAzureAd(options =>
-            //{
-            //    Configuration.Bind("AzureAd", options);
-            //    AzureAdOptions.Settings = options;
-            //}).AddCookie();
+            services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+               .AddSignIn("AzureAd", Configuration, options => Configuration.Bind("AzureAd", options));
+
+            //Token acquisition service based on MSAL.NET
+            //and chosen token cache implementation
+            services.AddWebAppCallsProtectedWebApi(Configuration, new string[] { Configuration["ProductList:ProductListResourceId"] })
+                    .AddInMemoryTokenCaches();
+
+            // Add Client
+            services.AddHttpContextAccessor();
+            services.AddHttpClient<IProductService, ProductService>();
+
+            services.AddControllersWithViews(options =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .Build();
+                options.Filters.Add(new AuthorizeFilter(policy));
+            }).AddMicrosoftIdentityUI();
 
             services.AddControllersWithViews();
         }

@@ -1,2 +1,0 @@
-Add-Migration FlixOneVendorRpdouctsDB
-Update-Database

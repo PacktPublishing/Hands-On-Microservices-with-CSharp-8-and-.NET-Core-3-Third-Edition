@@ -1,4 +1,4 @@
-version: '3'
+version: '3.4'
 
 services:
 
@@ -12,12 +12,12 @@ services:
       volumes:
         - flixone-sqldata:/var/opt/mssql
       
-    flixone.bookstore.productservice:
+    flixone.bookstore.userservice:
       environment:
         - ASPNETCORE_ENVIRONMENT=Development
-        - ConnectionString="Server=sqldata;Database=ProductsDB;User Id=sa;Password=Pass@word"
+        - ConnectionString="Server=sqldata;Database=FlixOne.BookStore.UsersDB;User Id=sa;Password=Pass@word"
       ports:
-      - "9109:80"
+      - "9100:80"
       
 #
 # [ volumes definition ]
@@ -32,3 +32,4 @@ volumes:
 #  default:
 #    external:
 #      name: nat
+#

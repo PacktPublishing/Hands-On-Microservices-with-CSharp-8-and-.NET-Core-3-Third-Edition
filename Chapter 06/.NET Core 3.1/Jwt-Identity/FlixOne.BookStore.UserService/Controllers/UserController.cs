@@ -41,8 +41,8 @@ namespace FlixOne.BookStore.UserService.Controllers
         ///      {
         ///         "FirstName": "Gaurav",
         ///         "LastName": "Arora",
-        ///         "EmailId": "login@flixone.com"
-        ///         "Password": "password123"
+        ///         "EmailId": "login@flixone.com",
+        ///         "Password": "password123",
         ///         "Mobile": "1234567890"
         ///      }
         ///  

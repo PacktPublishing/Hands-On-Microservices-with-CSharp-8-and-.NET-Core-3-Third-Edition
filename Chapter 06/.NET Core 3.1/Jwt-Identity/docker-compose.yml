@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    
+    sqldata:
+        image: mcr.microsoft.com/mssql/server:2017-latest
+    
+    flixone.bookstore.productservice:
+        image: flixone.bookstore.productservice
+        build:
+          context: ./FlixOne.BookStore.ProductService
+          dockerfile: Dockerfile
+        depends_on:
+          - sqldata

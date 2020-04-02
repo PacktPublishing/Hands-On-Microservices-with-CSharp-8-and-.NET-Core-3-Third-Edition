@@ -1,0 +1,56 @@
+version: '3.4'
+
+services:
+  flixone.bookstore.userservice:
+    image: ${DOCKER_REGISTRY-flixone}/flixonebookstoreuserservice
+    build:
+      context: .
+      dockerfile: FlixOne.BookStore.UserService/Dockerfile
+
+  flixone.bookstore.storeservice:
+    image: ${DOCKER_REGISTRY-flixone}/flixonebookstorestoreservice
+    build:
+      context: .
+      dockerfile: FlixOne.BookStore.StoreService/Dockerfile
+    depends_on:
+      - sql.data
+      - flixone.bookstore.userservice
+
+
+  flixone.boostore.reviewservice:
+    image: ${DOCKER_REGISTRY-flixone}/flixoneboostorereviewservice
+    build:
+      context: .
+      dockerfile: FlixOne.BooStore.ReviewService/Dockerfile
+    depends_on:
+      - sql.data
+      - flixone.bookstore.userservice
+      - reviews.data
+
+
+  flixone.bookstore.orderservice:
+    image: ${DOCKER_REGISTRY-flixone}/flixonebookstoreorderservice
+    build:
+      context: .
+      dockerfile: FlixOne.BookStore.OrderService/Dockerfile
+    depends_on:
+      - sql.data
+      - flixone.bookstore.userservice
+      - rabbitmq
+
+
+  flixone.bookstore.web:
+    image: ${DOCKER_REGISTRY-flixone}/flixonebookstoreweb:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: FlixOne.BookStore.Web/Dockerfile
+    
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+
+  reviews.data:
+    image: redis
+
+  rabbitmq:
+    image: rabbitmq:3-management
+

@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  flixone.boostore.reviewservice:
+    image: ${DOCKER_REGISTRY-}flixoneboostorereviewservice
+    build:
+      context: .
+      dockerfile: FlixOne.BooStore.ReviewService/Dockerfile
+    depends_on:
+      - sql.data
+      - reviews.data
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+
+  reviews.data:
+    image: redis 

@@ -24,7 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIGateways", "APIGateways"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{0FFE01A1-FE9C-4A7B-9865-0BA4B869D31B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.BookStore.Web", "FlixOne.BookStore.Web\FlixOne.BookStore.Web.csproj", "{9F40DFF6-7F8B-4B8D-A0A4-EA0AEFEA36D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlixOne.BookStore.Web", "Web\FlixOne.BookStore.Web\FlixOne.BookStore.Web.csproj", "{9F40DFF6-7F8B-4B8D-A0A4-EA0AEFEA36D8}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{02D801B9-755E-4EEB-9215-7C351CD14031}"
 EndProject

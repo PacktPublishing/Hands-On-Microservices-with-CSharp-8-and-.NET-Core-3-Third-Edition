@@ -4,7 +4,7 @@
 
 This is the code repository for [Hands-On Microservices with C# 8 and .NET Core 3.0 - Third Edition ](https://www.packtpub.com/web-development/hands-on-microservices-with-c-8-and-net-core-3-0-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789617948), published by Packt.
 
-**Refactor you monolith architecture into microservices using Azure**
+**Refactor your monolith architecture into microservices using Azure**
 
 ## What is this book about?
 The microservice architectural style promotes the development of complex applications as a suite of small services based on specific business capabilities. With this book, you'll take a hands-on approach to build microservices and deploy them using ASP .NET Core and Microsoft Azure.

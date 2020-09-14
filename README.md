@@ -1,6 +1,6 @@
 # Hands-On Microservices with C# 8 and .NET Core 3.0 - Third Edition 
 
-<a href="https://www.packtpub.com/web-development/hands-on-microservices-with-c-8-and-net-core-3-0-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789617948"><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/9/7/9781789617948-original.jpeg" alt="Hands-On Microservices with C# 8 and .NET Core 3.0 - Third Edition " height="256px" align="right"></a>
+<a href="https://www.packtpub.com/web-development/hands-on-microservices-with-c-8-and-net-core-3-0-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789617948"><img src="https://static.packt-cdn.com/products/9781789617948/cover/smaller" alt="Hands-On Microservices with C# 8 and .NET Core 3.0 - Third Edition " height="256px" align="right"></a>
 
 This is the code repository for [Hands-On Microservices with C# 8 and .NET Core 3.0 - Third Edition ](https://www.packtpub.com/web-development/hands-on-microservices-with-c-8-and-net-core-3-0-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789617948), published by Packt.
 
